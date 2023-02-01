@@ -26,3 +26,20 @@
   bottom: 1%;
   left: 1%;
 }
+
+.submitIcon {
+  font-size: 3em;
+  color: App.$colorTextSecondary;
+}
+
+.subButton {
+  background-color: transparent;
+  border: none;
+  display: block;
+  margin: auto;
+  margin-top: 2%;
+}
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,6 @@
+@use "../../App";
+
+.Game {
+  background-color: App.$colorBackground;
+  height: App.$heightMain;
+}

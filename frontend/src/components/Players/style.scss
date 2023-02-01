@@ -1,0 +1,39 @@
+@use "../../App";
+
+.players {
+  background-color: App.$colorBackground;
+  height: App.$heightMain;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.playersBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.playerCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff80;
+  height: 3em;
+  width: 70%;
+  border: thick double App.$colorThird;
+  border-radius: 0.2em;
+  text-align: center;
+  font-family: App.$fontFamilySecondary;
+  font-size: 1.5em;
+  color: #d93e30;
+}
+
+.playersTitle {
+  color: App.$colorText;
+  font-family: App.$fontFamilyPrimary;
+  font-size: calc(App.$fontSize * 2);
+  text-align: center;
+  padding-top: 5%;
+}

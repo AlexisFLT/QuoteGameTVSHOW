@@ -1,7 +1,7 @@
 import { AiOutlineUserAdd } from "react-icons/ai";
-import { useState } from "react";
 import UsernameInput from "@components/UsernameInput/UsernameInput";
 import "./style.scss";
+import { useState } from "react";
 
 export default function AddPLayer() {
   const [addP, setAddP] = useState([]);
