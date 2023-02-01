@@ -1,0 +1,68 @@
+@use "../App.scss";
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: App.$colorBackground;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.modalTitle {
+  color: App.$colorText;
+  font-family: App.$fontFamilyPrimary;
+  font-size: calc(App.$fontSize * 2);
+}
+
+.modalBody {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  border: thick double App.$colorThird;
+  padding: 0.5em;
+  color: App.$colorText;
+}
+
+.firstInstruc,
+.SecondInstruc,
+.ThirdInstruc,
+.part1,
+.part2,
+.part3,
+.scorePoints,
+.quoteJoke {
+  font-family: App.$fontFamilyThird;
+  text-align: justify;
+  font-size: calc(App.$fontSize);
+}
+.scorePoints,
+.firstBlock {
+  margin-left: 10%;
+  list-style-type: circle;
+}
+
+.firstBlock,
+.part1,
+.part2,
+.part3,
+.scorePoints {
+  margin-bottom: 5%;
+}
+
+.iconsIns {
+  color: App.$colorTextSecondary;
+}
+
+.closeIcon {
+  font-size: 2em;
+  color: App.$colorTextSecondary;
+}
+
+.buttonClose {
+  background-color: transparent;
+  border: none;
+}
