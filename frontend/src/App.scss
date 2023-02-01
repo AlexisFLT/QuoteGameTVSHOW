@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Yellowtail&family=Yesteryear&display=swap");
+//font-family: 'Righteous', cursive;
+//font-family: 'Yellowtail', cursive;
+//font-family: 'Yesteryear', cursive;
+
+$colorBackground: #401d15;
+$colorPrimary: #734230;
+$colorSecondary: #8c5b3f;
+$colorThird: #a67e5b;
+$colorText: #bf9d73;
+$colorTextSecondary: #d93e30;
+$heightMain: 100vh;
+$heightSolutions: 20vh;
+$heightQuote: 20vh;
+$fontFamilyPrimary: "Yesteryear", cursive;
+$fontFamilySecondary: "Yellowtail", cursive;
+$fontFamilyThird: "Righteous", cursive;
+$fontSize: 1em;
+$smallGap: 0.5em;
+
+:root {
+  height: $heightMain;
+}

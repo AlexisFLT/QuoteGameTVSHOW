@@ -1,0 +1,21 @@
+@use "../../App";
+
+.inputBlock {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2%;
+  width: 60%;
+}
+
+.inputName {
+  background-color: #ffffff80;
+  height: auto;
+  width: 15em;
+  border: thick double App.$colorThird;
+  border-radius: 0.2em;
+  text-align: center;
+  font-family: App.$fontFamilySecondary;
+  font-size: 1.5em;
+  color: #d93e30;
+}
