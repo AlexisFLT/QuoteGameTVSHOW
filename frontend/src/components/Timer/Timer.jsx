@@ -7,7 +7,7 @@ import "./style.scss";
 import axios from "axios";
 
 export default function Timer({ handleStart }) {
-  const [seconds, setSeconds] = useState(5);
+  const [seconds, setSeconds] = useState(60);
   const [isActive, setIsActive] = useState(false);
   const [score, setScore] = useState();
   const { id } = useParams();
@@ -49,16 +49,18 @@ export default function Timer({ handleStart }) {
   return (
     <div>
       <button
-        className="starTimerButton"
+        className="starTimerButton pulse"
         type="button"
         onClick={() => {
           handleStart();
           toggle();
         }}
       >
-        {isActive ? null : "Démarrer"}
+        <p className="startText">
+          {isActive ? "pause" : "Click here to start"}
+        </p>
       </button>
-      {seconds === 0 ? timerOut() : seconds}
+      <p className="timerSeconds">{seconds === 0 ? timerOut() : seconds}</p>
     </div>
   );
 }

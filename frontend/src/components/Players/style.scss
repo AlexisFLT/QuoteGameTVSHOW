@@ -3,19 +3,23 @@
 .players {
   background-color: App.$colorBackground;
   height: App.$heightMain;
-  display: flex;
+}
+
+.playersBody {
+  display: block;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .playersBlock {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 20%;
   gap: 0.5em;
 }
 
 .playerCard {
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,4 +40,21 @@
   font-size: calc(App.$fontSize * 2);
   text-align: center;
   padding-top: 5%;
+}
+
+.scoreBoardBurtton {
+  display: block;
+  margin: auto;
+  margin-top: 20%;
+  border: thick double App.$colorThird;
+  border-radius: 0.2em;
+  background-color: transparent;
+  font-size: 1em;
+  color: App.$colorTextSecondary;
+  padding: 0.5em;
+  font-family: App.$fontFamilyThird;
+}
+
+.linkButtonScore {
+  text-decoration: none;
 }

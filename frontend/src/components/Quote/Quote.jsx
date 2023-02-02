@@ -87,16 +87,21 @@ export default function Quote() {
       <div className="timer">
         <Timer handleStart={handleStart} />
       </div>
-      <div className="quoteCard">{quote?.quote}</div>
-      {answers.map((answer) => (
-        <button
-          type="button"
-          key={answer.data.id}
-          onClick={(evt) => good(evt, answer.data.id)}
-        >
-          {answer.data.title}
-        </button>
-      ))}
+      <div className="quoteCard">
+        <p className="quoteText">"{quote?.quote}"</p>
+      </div>
+      <div className="answersBlock">
+        {answers.map((answer) => (
+          <button
+            className="answsers"
+            type="button"
+            key={answer.data.id}
+            onClick={(evt) => good(evt, answer.data.id)}
+          >
+            <p className="answer">{answer.data.title}</p>
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

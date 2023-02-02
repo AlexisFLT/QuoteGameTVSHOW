@@ -1,0 +1,31 @@
+@use "../../App";
+
+.starTimerButton {
+  display: block;
+  margin: auto;
+  margin-top: 20%;
+  border: thick App.$colorTextSecondary;
+  border-radius: 0.2em;
+  background-color: transparent;
+  font-size: 1em;
+  color: App.$colorTextSecondary;
+  padding: 0.5em;
+  font-family: App.$fontFamilyThird;
+}
+
+.startText {
+  text-shadow: 0 0 2px rgb(179, 154, 154), 0 0 7px rgb(134, 84, 84);
+  font-size: calc(App.$fontSize * 1.5);
+}
+
+.timerSeconds {
+  text-align: center;
+  font-size: calc(App.$fontSize * 2);
+  font-family: App.$fontFamilyThird;
+  color: App.$colorTextSecondary;
+  text-shadow: 0 0 2px rgb(179, 154, 154), 0 0 7px rgb(134, 84, 84),
+    0 0 10px App.$colorTextSecondary, 0 0 21px App.$colorTextSecondary,
+    0 0 42px App.$colorTextSecondary, 0 0 82px App.$colorTextSecondary,
+    0 0 92px App.$colorTextSecondary, 0 0 102px App.$colorTextSecondary,
+    0 0 151px App.$colorTextSecondary;
+}

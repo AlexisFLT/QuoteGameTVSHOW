@@ -4,3 +4,15 @@
   background-color: App.$colorBackground;
   height: App.$heightMain;
 }
+
+.playerName {
+  color: App.$colorText;
+  font-family: App.$fontFamilyThird;
+  font-size: calc(App.$fontSize * 2);
+  text-align: center;
+  padding-top: 5%;
+}
+
+.quote {
+  margin-top: 5%;
+}

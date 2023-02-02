@@ -1,1 +1,46 @@
 @use "../../App";
+
+.quoteCard{
+    margin-top: 10%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url("../../assets/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 15vh;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quoteText{
+    color: App.$colorText;
+}
+
+.quoteText, .answer{
+    padding: 0.2em;
+    font-family: App.$fontFamilyThird;
+    font-size: App.$fontSize;
+}
+
+.answersBlock{
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.answsers{
+    width: 40%;
+    height: 10vh;
+    margin: auto;
+    margin-bottom: 0.5em;
+    border: 2px solid App.$colorText;
+    border-radius: 0.5em;
+    background-color: App.$colorSecondary;
+}
+
+.answer{
+    color: App.$colorBackground;
+}
