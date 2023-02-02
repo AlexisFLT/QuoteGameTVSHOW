@@ -46,7 +46,7 @@ export default function Quote() {
     const randomIds = [
       ...new Set([
         randomId,
-        ...Array.from({ length: 3 }, () => Math.floor(Math.random() * 47)),
+        ...Array.from({ length: 3 }, () => Math.floor(Math.random() * 50)),
       ]),
     ];
 
