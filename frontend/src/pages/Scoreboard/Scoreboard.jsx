@@ -24,13 +24,9 @@ export default function Scoreboard() {
         <div className="tBody">
           {player.map((elt) => {
             return (
-              <div className="cardScore">
-                <p className="usernameText" key={elt.id}>
-                  {elt.username}
-                </p>
-                <p className="scoreText" key={elt.id}>
-                  {elt.score}
-                </p>
+              <div className="cardScore" key={elt.id}>
+                <p className="usernameText">{elt.username}</p>
+                <p className="scoreText">{elt.score}</p>
               </div>
             );
           })}

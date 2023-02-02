@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
@@ -7,19 +7,23 @@ import "./style.scss";
 import axios from "axios";
 
 export default function Timer({ handleStart }) {
-  const [seconds, setSeconds] = useState(60);
+  const [seconds, setSeconds] = useState(15);
   const [isActive, setIsActive] = useState(false);
   const [score, setScore] = useState();
   const { id } = useParams();
   const navigate = useNavigate();
 
-  useEffect(() => {
+  const waitForScore = async () => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/user/${id}`)
       .then(({ data }) => {
         setScore(data.score);
       });
-  }, []);
+  };
+  waitForScore();
+
+  const secondsRef = useRef(seconds);
+  secondsRef.current = seconds;
 
   function toggle() {
     setIsActive(!isActive);
@@ -37,14 +41,16 @@ export default function Timer({ handleStart }) {
     return () => clearInterval(interval);
   }, [isActive, seconds]);
 
-  const timerOut = () => {
-    Swal.fire({
-      title: "Time Out !",
-      text: `Your score: ${score}`,
-      icon: "success",
-    });
-    navigate("/players");
-  };
+  useEffect(() => {
+    if (score !== undefined && seconds === 0) {
+      Swal.fire({
+        title: "Time Out !",
+        text: `Your score: ${score}`,
+        icon: "success",
+      });
+      navigate("/players");
+    }
+  }, [seconds, score, navigate]);
 
   return (
     <div>
@@ -58,7 +64,7 @@ export default function Timer({ handleStart }) {
       >
         <p className="startText">{isActive ? null : "Click here to start"}</p>
       </button>
-      <p className="timerSeconds">{seconds === 0 ? timerOut() : seconds}</p>
+      <p className="timerSeconds">{secondsRef.current}</p>
     </div>
   );
 }

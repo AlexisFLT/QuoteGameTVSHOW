@@ -25,3 +25,5 @@ export default function Home() {
     </div>
   );
 }
+
+// reset button => DELETE FROM `user` WHERE `id` IN (1,2,3,6,7)

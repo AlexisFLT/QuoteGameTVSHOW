@@ -1,22 +1,32 @@
 import axios from "axios";
 import { useState } from "react";
 import { BsCheck2Circle } from "react-icons/bs";
+import Swal from "sweetalert2";
 import "./style.scss";
 
 export default function UsernameInput() {
   const [name, setName] = useState({
     username: "",
   });
+
   const handleName = (evt) => {
     setName({ ...name, username: evt.target.value });
   };
-  const hSubmit = (evt) => {
+
+  const hSubmit = async (evt) => {
     evt.preventDefault();
-    axios
-      .post(`${import.meta.env.VITE_BACKEND_URL}/user`, name)
-      .catch((err) => {
-        console.error(err);
-      });
+    try {
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/user`, name);
+      const validate = () => {
+        Swal.fire({
+          title: "Register !",
+          icon: "success",
+        });
+      };
+      validate();
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
@@ -28,6 +38,7 @@ export default function UsernameInput() {
         onChange={handleName}
         value={name.username}
         name="username"
+        autoComplete="off"
       />
       <button type="submit" className="subButton">
         <BsCheck2Circle className="submitIcon pulse" />

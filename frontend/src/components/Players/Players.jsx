@@ -23,10 +23,12 @@ export default function Players() {
         <div className="playersBlock">
           {players.map((elt) => {
             return (
-              <Link className="playerCard" to={`/player/game/${elt.id}`}>
-                <p key={elt.id} data={elt}>
-                  {elt.username}
-                </p>
+              <Link
+                className="playerCard"
+                to={`/player/game/${elt.id}`}
+                key={elt.id}
+              >
+                <p>{elt.username}</p>
               </Link>
             );
           })}
