@@ -1,6 +1,6 @@
 ## Concept
 
-This project is a mini quiz game about TV series. It was made in 48 hours as part of an exam for the end of the web developer training at the Wild Code School in Lille.
+This project is a mini quiz game about TV series quotes. It was made in 48 hours as part of an exam for the end of the web developer training at the Wild Code School in Lille.
 
 ## Setup & Use
 
