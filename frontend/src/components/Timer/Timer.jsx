@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import "./style.scss";
 
-export default function Timer() {
-  const [seconds, setSeconds] = useState(10);
+export default function Timer({ handleStart }) {
+  const [seconds, setSeconds] = useState(60);
   const [isActive, setIsActive] = useState(false);
 
   function toggle() {
@@ -24,9 +25,20 @@ export default function Timer() {
   return (
     <div>
       <div className="timer">{seconds}</div>
-      <button className="starTimerButton" type="button" onClick={toggle}>
-        {isActive ? "Pause" : "Démarrer"}
+      <button
+        className="starTimerButton"
+        type="button"
+        onClick={() => {
+          handleStart();
+          toggle();
+        }}
+      >
+        {isActive ? null : "Démarrer"}
       </button>
     </div>
   );
 }
+
+Timer.propTypes = {
+  handleStart: PropTypes.func.isRequired,
+};
