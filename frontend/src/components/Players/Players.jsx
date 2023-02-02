@@ -26,6 +26,9 @@ export default function Players() {
           );
         })}
       </div>
+      <button className="scoreBoardBurtton" type="button">
+        ScoreBoard
+      </button>
     </div>
   );
 }

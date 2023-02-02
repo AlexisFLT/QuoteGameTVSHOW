@@ -1,10 +1,25 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { useParams } from "react-router";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import "./style.scss";
+import axios from "axios";
 
 export default function Timer({ handleStart }) {
-  const [seconds, setSeconds] = useState(60);
+  const [seconds, setSeconds] = useState(5);
   const [isActive, setIsActive] = useState(false);
+  const [score, setScore] = useState();
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/user/${id}`)
+      .then(({ data }) => {
+        setScore(data.score);
+      });
+  }, []);
 
   function toggle() {
     setIsActive(!isActive);
@@ -22,9 +37,17 @@ export default function Timer({ handleStart }) {
     return () => clearInterval(interval);
   }, [isActive, seconds]);
 
+  const timerOut = () => {
+    Swal.fire({
+      title: "Time Out !",
+      text: `Your score: ${score}`,
+      icon: "success",
+    });
+    navigate("/players");
+  };
+
   return (
     <div>
-      <div className="timer">{seconds}</div>
       <button
         className="starTimerButton"
         type="button"
@@ -35,6 +58,7 @@ export default function Timer({ handleStart }) {
       >
         {isActive ? null : "Démarrer"}
       </button>
+      {seconds === 0 ? timerOut() : seconds}
     </div>
   );
 }
