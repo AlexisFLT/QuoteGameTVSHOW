@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import { IoPlayBackCircleSharp } from "react-icons/io";
+import { AiFillBackward } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "./style.scss";
 
@@ -16,7 +16,7 @@ export default function Scoreboard() {
     <div className="scoreboardPage">
       <Link to="/players">
         <button className="returnButton" type="button">
-          {/* <IoPlayBackCircleSharp className="iconReturn pulse" /> */}
+          <AiFillBackward className="iconReturn pulse" />
         </button>
       </Link>
       <h1 className="scoreboardTitle">Scoreboard</h1>

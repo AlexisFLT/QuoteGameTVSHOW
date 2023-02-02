@@ -40,6 +40,19 @@
   margin-top: 2%;
 }
 
-.hide {
-  display: none;
+.linktoPlayers{
+  text-decoration: none;
+}
+
+.launch{
+  position: absolute;
+  bottom: 3%;
+  right: 10%;
+  border: thick double App.$colorThird;
+  border-radius: 0.2em;
+  background-color: transparent;
+  font-size: 1em;
+  color: App.$colorTextSecondary;
+  padding: 0.5em;
+  font-family: App.$fontFamilyThird;
 }

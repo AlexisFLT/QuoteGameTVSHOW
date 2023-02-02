@@ -1,6 +1,7 @@
 import AddPLayer from "@components/AddPlayer/AddPlayer";
 import Instructions from "@components/Instructions/Instructions";
 import Logo from "@components/Logo/Logo";
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 export default function Home() {
@@ -13,6 +14,11 @@ export default function Home() {
       <div className="addPlayerButton">
         <AddPLayer />
       </div>
+      <Link className="linktoPlayers" to="/players">
+        <button type="button" className="launch">
+          Ready
+        </button>
+      </Link>
       <footer className="InstructionIconBlock">
         <Instructions />
       </footer>
