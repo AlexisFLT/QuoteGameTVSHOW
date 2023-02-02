@@ -1,0 +1,66 @@
+@use "../../App";
+
+.scoreboardPage {
+  background-color: App.$colorBackground;
+  height: App.$heightMain;
+}
+
+.scoreboardTitle {
+  color: App.$colorText;
+  font-family: App.$fontFamilyPrimary;
+  font-size: calc(App.$fontSize * 2);
+  text-align: center;
+  padding-top: 5%;
+}
+
+.table {
+  display: block;
+  margin: auto;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 35%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url("../../assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.5em;
+}
+
+.tBody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.cardScore {
+  width: auto;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: App.$colorText 1px solid;
+  border-radius: 0.5em;
+  background-color: #b69f822c;
+}
+
+.cardScore:nth-child(1),
+.cardScore:nth-child(2),
+.cardScore:nth-child(2),
+.cardScore:nth-child(3),
+.cardScore:nth-child(4),
+.cardScore:nth-child(5) {
+  margin-bottom: 0.5em;
+}
+
+.cardScore:last-child {
+  margin-bottom: unset;
+}
+
+.usernameText,
+.scoreText {
+  padding: 2em;
+  color: App.$colorTextSecondary;
+  font-family: App.$fontFamilyThird;
+  font-size: calc(App.$fontSize * 1.5);
+}

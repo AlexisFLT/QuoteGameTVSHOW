@@ -19,24 +19,23 @@ export default function Scoreboard() {
           {/* <IoPlayBackCircleSharp className="iconReturn pulse" /> */}
         </button>
       </Link>
-      <table className="table">
-        <thead>
-          <tr>
-            <th>Username</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody>
+      <h1 className="scoreboardTitle">Scoreboard</h1>
+      <div className="table">
+        <div className="tBody">
           {player.map((elt) => {
             return (
-              <tr>
-                <td key={elt.id}>{elt.username}</td>
-                <td key={elt.id}>{elt.score}</td>
-              </tr>
+              <div className="cardScore">
+                <p className="usernameText" key={elt.id}>
+                  {elt.username}
+                </p>
+                <p className="scoreText" key={elt.id}>
+                  {elt.score}
+                </p>
+              </div>
             );
           })}
-        </tbody>
-      </table>
+        </div>
+      </div>
     </div>
   );
 }

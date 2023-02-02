@@ -56,9 +56,7 @@ export default function Timer({ handleStart }) {
           toggle();
         }}
       >
-        <p className="startText">
-          {isActive ? "pause" : "Click here to start"}
-        </p>
+        <p className="startText">{isActive ? null : "Click here to start"}</p>
       </button>
       <p className="timerSeconds">{seconds === 0 ? timerOut() : seconds}</p>
     </div>
