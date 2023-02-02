@@ -1,7 +1,6 @@
 ## Concept
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
+This project is a mini quiz game on TV series lines. It was made in 48 hours as part of an exam for the end of the web developer training at the Wild Code School in Lille.
 
 ## Setup & Use
 
