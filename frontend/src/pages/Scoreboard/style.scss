@@ -83,3 +83,34 @@
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
   animation: heartbeat 1.5s ease-in-out infinite both;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+  .scoreboardTitle {
+    display: unset;
+    padding-top: 0;
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    right: 40%;
+  }
+
+  .table {
+    margin-top: 5%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .cardScore {
+    width: 40%;
+    margin: 0.5em;
+    height: 10vh;
+  }
+
+  .tBody {
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+}

@@ -75,3 +75,18 @@
     transform: translateX(-6px) rotate(-1.2deg);
   }
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+  .formAddPlayer {
+    position: absolute;
+    left: 1%;
+    top: 1%;
+  }
+  .AddPlayerBlock {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: 20%;
+    margin-top: -7%;
+  }
+}

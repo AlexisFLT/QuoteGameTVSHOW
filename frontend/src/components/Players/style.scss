@@ -58,3 +58,34 @@
 .linkButtonScore {
   text-decoration: none;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+  .playersBlock {
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  .playersTitle {
+    padding-top: unset;
+    position: absolute;
+    top: 5%;
+    right: 30%;
+    left: 30%;
+  }
+  .playerCard {
+    font-size: 1.5em;
+    margin-bottom: 0.1em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    width: 40%;
+  }
+
+  .scoreBoardBurtton {
+    position: absolute;
+    margin-top: 0;
+    top: 2%;
+    right: 1%;
+  }
+}

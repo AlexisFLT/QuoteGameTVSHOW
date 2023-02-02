@@ -46,3 +46,23 @@
 .answer {
   color: App.$colorBackground;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+  .quoteCard {
+    margin-top: 2%;
+    height: 20vh;
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+  .answsers {
+    width: 40%;
+    height: 15vh;
+    margin: auto;
+    margin-bottom: 0.5em;
+    border-radius: 0.5em;
+  }
+
+  .answersBlock {
+    margin-top: 2%;
+  }
+}

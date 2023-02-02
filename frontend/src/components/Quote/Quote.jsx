@@ -88,7 +88,7 @@ export default function Quote() {
         <Timer handleStart={handleStart} />
       </div>
       <div className="quoteCard">
-        <p className="quoteText">"{quote?.quote}"</p>
+        <p className="quoteText">{quote?.quote}</p>
       </div>
       <div className="answersBlock">
         {answers.map((answer) => (

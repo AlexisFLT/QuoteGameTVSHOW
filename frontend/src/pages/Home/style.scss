@@ -56,3 +56,11 @@
   padding: 0.5em;
   font-family: App.$fontFamilyThird;
 }
+
+//SMARTPHONE
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+  .welcomeTo {
+    margin-left: 50%;
+  }
+}

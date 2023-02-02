@@ -30,19 +30,21 @@ export default function UsernameInput() {
   };
 
   return (
-    <form onSubmit={hSubmit} className="inputBlock">
-      <input
-        type="text"
-        className="inputName"
-        placeholder="Player's name"
-        onChange={handleName}
-        value={name.username}
-        name="username"
-        autoComplete="off"
-      />
-      <button type="submit" className="subButton">
-        <BsCheck2Circle className="submitIcon pulse" />
-      </button>
-    </form>
+    <div className="usernameInputBlock">
+      <form onSubmit={hSubmit} className="inputBlock">
+        <input
+          type="text"
+          className="inputName"
+          placeholder="Player's name"
+          onChange={handleName}
+          value={name.username}
+          name="username"
+          autoComplete="off"
+        />
+        <button type="submit" className="subButton">
+          <BsCheck2Circle className="submitIcon pulse" />
+        </button>
+      </form>
+    </div>
   );
 }

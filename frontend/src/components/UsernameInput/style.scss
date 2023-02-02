@@ -20,3 +20,20 @@
   font-size: 1.5em;
   color: #d93e30;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+  .usernameInputBlock {
+    display: flex;
+  }
+  .inputBlock {
+    width: 25%;
+    margin: unset;
+    margin: 0.1em;
+  }
+
+  .inputName {
+    background-color: #ffffff80;
+    height: 10vh;
+    width: 15em;
+  }
+}

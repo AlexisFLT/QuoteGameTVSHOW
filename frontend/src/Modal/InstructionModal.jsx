@@ -26,7 +26,7 @@ export default function IntructionModal(props) {
           <li className="ThirdInstruc">Choose your name and off you go !</li>
         </ul>
         <p className="part1">
-          You will have 30 seconds to find the maximum of quotes.
+          You will have 20 seconds to find the maximum of quotes.
         </p>
         <p className="part3">
           Choose the right answer:

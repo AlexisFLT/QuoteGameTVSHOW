@@ -7,7 +7,7 @@ import "./style.scss";
 import axios from "axios";
 
 export default function Timer({ handleStart }) {
-  const [seconds, setSeconds] = useState(15);
+  const [seconds, setSeconds] = useState(20);
   const [isActive, setIsActive] = useState(false);
   const [score, setScore] = useState();
   const { id } = useParams();
