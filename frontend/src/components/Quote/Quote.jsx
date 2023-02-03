@@ -33,9 +33,9 @@ export default function Quote() {
   };
 
   const handleStart = async () => {
-    let randomId = Math.floor(Math.random() * 47);
+    let randomId = Math.floor(Math.random() * 50);
     while (randomId === 0 && randomId !== null) {
-      randomId = Math.floor(Math.random() * 47);
+      randomId = Math.floor(Math.random() * 50);
     }
     const response = await axios.get(
       `${import.meta.env.VITE_BACKEND_URL}/tvshow/${randomId}`
