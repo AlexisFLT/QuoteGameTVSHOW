@@ -28,13 +28,15 @@ export default function Quote() {
         score: score + 1,
       });
     } catch (error) {
-      console.error(error);
+      // console.error(error);
     }
   };
 
   const handleStart = async () => {
-    let randomId = Math.floor(Math.random() * 50);
-    while (randomId === 0 && randomId !== null) {
+    const max = 50;
+    const min = 1;
+    let randomId = Math.floor(Math.random() * (max - min + 1)) + min;
+    while (randomId === 0) {
       randomId = Math.floor(Math.random() * 50);
     }
     const response = await axios.get(
@@ -46,9 +48,13 @@ export default function Quote() {
     const randomIds = [
       ...new Set([
         randomId,
-        ...Array.from({ length: 3 }, () => Math.floor(Math.random() * 50)),
+        ...Array.from(
+          { length: 3 },
+          () => Math.floor(Math.random() * (max - min + 1)) + min
+        ),
       ]),
     ];
+    // console.log(randomIds);
 
     const responses = await Promise.all(
       randomIds.map((idtv) =>
